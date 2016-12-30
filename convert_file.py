@@ -8,7 +8,7 @@ from rgb_xy import Converter
 
 converter = Converter()
 
-with open('color_curves_rgb.csv', 'rU') as inputfile: # Read rgb color curves (csv file) into list
+with open('color_curves_rgb_2.csv', 'rU') as inputfile: # Read rgb color curves (csv file) into list
     results = list(csv.reader(inputfile))
 
 rgb_list = [[int(x) for x in rec] for rec in results] # Convert the list to integers
@@ -20,7 +20,7 @@ for item, value in enumerate(rgb_list, start=0): # Convert each list element fro
 
 # print xy_list
 
-with open('color_curves_xy.json', 'w') as outputfile: # Write list out to json file
+with open('color_curves_xy_2.json', 'w') as outputfile: # Write list out to json file
     json.dump(xy_list, outputfile)
 
 # with open('color_curves_xy.json') as f: # Here as an example of how to read a json file into a list
